@@ -3,7 +3,7 @@ name: Build Storybook
 on:
   push:
     branches:
-      - UTV-4360-add-storybook
+      - main
 
 jobs:
   build:

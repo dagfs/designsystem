@@ -2,7 +2,7 @@ name: Deploy site
 
 on:
   workflow_run:
-    workflows: ["Build site"]
+    workflows: ["Build Storybook"]
     branches: [main]
     types: [completed]
 
@@ -14,7 +14,7 @@ jobs:
     
     steps:
     - name: Download artifact
-      uses: dawidd6/action-download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: production-files
     
