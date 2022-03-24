@@ -40,6 +40,10 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: production-files
+        path: production-files
+
+    - name: Display structure of downloaded files
+      run: ls -R
     
     - name: Azure login
       uses: azure/login@v1
