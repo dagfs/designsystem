@@ -56,7 +56,7 @@ jobs:
         azcliversion: 2.0.72
         inlineScript: |
             az account set --subscription ${{ secrets.SUBSCRIPTION }}
-            az storage blob upload-batch --account-name ${{ secrets.ACCOUNT_NAME }} -d '$web' -s ./production-files --subscription ${{ secrets.SUBSCRIPTION }}
+            az storage blob upload-batch --account-name ${{ secrets.ACCOUNT_NAME }} -d '$web' -s './production-files' --subscription ${{ secrets.SUBSCRIPTION }}
 
     - name: Azure logout
       run: |
